@@ -52,13 +52,17 @@ Welcome to IS580 Knowledge Discovery and Mining Tutorials page. This lecture wil
 
 The syllabus for this year's lecture is as follows:
 
-- Introduction to Data Mining
-- Data Preprocessing
-- Mining Frequent Patterns, Associations, and Correlations
+- Introduction to data mining
+- Data preprocessing
+- Mining frequent patterns, associations, and correlations
 - Prediction
 - Classification (Logistic regression, linear&non-linear classification, neural networks, SVM, linear discriminant analysis, Bayesian classification, k-NN, decision trees, rule-based classification)
-- Evaluation and Credibility
+- Evaluation and credibility
 - Clustering (Hierarchical, density-based, model-based)
 - Combining methods
 - Advanced methods
+
 </p>
+
+## Tutorials
+[How to Install R and RStudio](https://github.com/SeymaCavdar/R_for_KnowledgeDiscoveryandMining/installation.html)
