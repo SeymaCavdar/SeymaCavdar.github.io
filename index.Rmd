@@ -65,4 +65,4 @@ The syllabus for this year's lecture is as follows:
 </p>
 
 ## Tutorials
-[How to Install R and RStudio](./installation.html)
+[How to Install R and RStudio](./R_for_KnowledgeDiscoveryandMining/installation.html)
