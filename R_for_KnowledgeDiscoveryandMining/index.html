@@ -1,337 +1,110 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
 
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
 
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
 
-<title>Class Information</title>
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
-<script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
-}
-</script>
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-
 </head>
-
 <body>
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 61px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-
-.section h2 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h3 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h4 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h5 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h6 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-
-
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">R for Social Media Analytics Tutorials</a>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tutorials 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#https://seymacavdar.github.io/R_for_KnowledgeDiscoveryandMining/installation.html">How to install R/RStudio</a>
+      <a href="#">Introduction to R</a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    Home
-  </a>
-</li>
-<li>
-  <a href="about.html">
-    <span class="fa fa-info"></span>
-     
-    About
-  </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-code"></span>
-     
-    Tutorials
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Tutorials</li>
-    <li>
-      <a href="installation.html">How to Install R and RStudio</a>
-    </li>
-    <li>
-      <a href="Intro_to_R.nb.html">Introduction to R</a>
-    </li>
-    <li>
-      <a href="anova.nb.html">Hypothesis Testing and Anova</a>
-    </li>
-    <li>
-      <a href="DataCollection.nb.html">Twitter API and Basic Data Cleaning</a>
-    </li>
-    <li>
-      <a href="text_processing.nb.html">Text and Natural Language Processing</a>
-    </li>
-  </ul>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://nornanalytics.com">
-    <span class="fa fa-building fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Class Information</h1>
-
+  </div> 
 </div>
 
-
-<style type="text/css">
-
-
-.main-container {
-  max-width: 1180px;
-}
-
-
-body{ /* Normal  */
-      font-size: 14px;
-      text-align: justify;
-      text-justify: inter-word;
-  }
-td {  /* Table  */
-  font-size: 10px;
-}
-h1.title {
-  font-size: 30px;
-  color: DimGrey;
-}
-h1 { /* Header 1 */
-  font-size: 28px;
-  color: DarkGrey;
-}
-h2 { /* Header 2 */
-    font-size: 22px;
-  color: DarkGrey;
-}
-h3 { /* Header 3 */
-  font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
-  color: DarkGrey;
-}
-code.r{ /* Code block */
-    font-size: 12px;
-}
-pre { /* Code block - determines code spacing between lines */
-    font-size: 14px;
-}
-</style>
-<p>
-<p><img src="Intro_to_R_files/figure-html/social-media-analytic-tool.png" width="200" align="right"/></p>
-<p>Welcome to IS783 Social Media Analytics Tutorials page. This lecture will be given by <a href="https://blog.metu.edu.tr/ttemizel/">Assoc. Prof.Â Dr.Â Tugba Taskaya Temizel</a>. The assistant who will be doing the applied portion of the course is myself, <a href="about.html">Ayse Elvan Aydemir</a>. This page will contain the lab codes for the class as RMarkdown documents.You can go to the <a href="https://github.com/NornAnalytics/R_for_Social_Media_Analytics">github repo</a> for the full Rmarkdown files to use in your local environment.The entirety of materials will be available through ODTUClass. This blog only aims to provide a collection of rendered RMarkdown files.</p>
-<p>The syllabus for this yearâ€™s lecture is as follows:</p>
+<h3>2017-2018 Spring IS580 Knowledge Discovery and Mining Tutorials Page</h3>
+<p>Welcome to IS580 Knowledge Discovery and Mining Tutorials page. This lecture will be given by <a href="https://blog.metu.edu.tr/ttemizel/">Assoc. Prof. Dr. Tugba Taskaya Temizel</a>. The assistant who will be doing the applied portion of the course is <a href="about.html">Seyma Cavdar</a>. This page will contain the lab codes for the class as RMarkdown documents.You can go to the <a href="https://github.com/SeymaCavdar/R_for_KnowledgeDiscoveryandMining">github repository</a> for the full Rmarkdown files to use in your local environment.The entirety of materials will be available through <a href="https://odtuclass.metu.edu.tr/">ODTU-Class</a>. This blog only aims to provide a collection of rendered RMarkdown files.</p>
+<p>The syllabus for this year’s lecture is as follows:</p>
 <ul>
-<li>Introduction to Social Media</li>
-<li>Foundations of Social Media</li>
-<li>Social Media Study Design and Research Methods</li>
-<li>R for Social Media Analysis</li>
-<li>Social Media Business</li>
-<li>Social Media Content Analysis (Sentiment Analysis, Opinion Mining)</li>
-<li>Social Media Quality</li>
-<li>Ethics, legal and privacy issues</li>
+<li>Introduction to data mining</li>
+<li>Data preprocessing</li>
+<li>Mining frequent patterns, associations, and correlations</li>
+<li>Prediction</li>
+<li>Classification (Logistic regression, linear&amp;non-linear classification, neural networks, SVM, linear discriminant analysis, Bayesian classification, k-NN, decision trees, rule-based classification)</li>
+<li>Evaluation and credibility</li>
+<li>Clustering (Hierarchical, density-based, model-based)</li>
+<li>Combining methods</li>
+<li>Advanced methods</li>
 </ul>
-<p>The content for the applied portion will be in R and is given as â€˜R for Social Media Analysisâ€™ in the syllabus.</p>
+
 <p>The contents for the applied portion are as follows:</p>
 <ul>
-<li>Connecting to social media websites and pulling data through APIs (Facebook, Twitter, Quora)</li>
-<li>Extracting followee/follower and activity information from these websites</li>
-<li>Cleaning data for analysis and Bonus: tidyverse</li>
-<li>Keeping up with the hype: Sentiment analysis</li>
-<li>Modeling the data</li>
-<li>Profiling and clustering/segmentation</li>
+<li>Descriptive statistics and visualization</li>
+<li>Missing data handling</li>
+<li>Dimensionality reduction and discretization</li>
+<li>Association mining</li>
+<li>Regression and time series</li>
 </ul>
-</p>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 </body>
 </html>
