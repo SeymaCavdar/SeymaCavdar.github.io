@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="https://seymacavdar.github.io/R_for_KnowledgeDiscoveryandMining/index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tutorials 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://seymacavdar.github.io/R_for_KnowledgeDiscoveryandMining/installation.html">How to install R/RStudio</a>
+      <a href="https://seymacavdar.github.io/R_for_KnowledgeDiscoveryandMining/intro_to_R2.nb.html">Introduction to R</a>
+    </div>
+  </div> 
+</div>
+
+<h1 class="title toc-ignore">How to Install R and RStudio</h1>
+
+</div>
+
+
+<div id="windowsmac" class="section level2">
+<h2>Windows/Mac</h2>
+<ul>
+<li>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> and select “Download R for Windows” and follow the instructions regarding your installation.</li>
+<li>For installation, please make sure to install your R into a directory without blank spaces. (i.e. D:/R) This is important for further package installations.</li>
+<li>After installing R, download and install Rstudio Desktop from <a href="https://www.rstudio.com/products/RStudio/" class="uri">https://www.rstudio.com/products/RStudio/</a> if you are familiar with networking principles you can also use Rstudio server however for first time users desktop is recommended.</li>
+</ul>
+</div>
+<div id="ubuntu-16.04" class="section level2">
+<h2>Ubuntu 16.04</h2>
+<p>Install R using following commands:</p>
+<ul>
+<li>sudo echo “deb <a href="http://cran.rstudio.com/bin/linux/ubuntu" class="uri">http://cran.rstudio.com/bin/linux/ubuntu</a> xenial/” | sudo tee -a /etc/apt/sources.list</li>
+<li>gpg –keyserver keyserver.ubuntu.com –recv-key E084DAB9</li>
+<li>gpg -a –export E084DAB9 | sudo apt-key add –</li>
+<li>sudo apt-get update</li>
+<li>sudo apt-get install r-base r-base-dev</li>
+<li>sudo apt-get install gdebi-core</li>
+<li>wget <a href="https://download1.rstudio.org/rstudio-1.0.153-amd64.deb" class="uri">https://download1.rstudio.org/rstudio-1.0.153-amd64.deb</a></li>
+<li>sudo gdebi -n rstudio-1.0.153-amd64.deb</li>
+<li>rm rstudio-1.0.153-amd64.deb</li>
+</ul>
+</div>
+
+</body>
+</html>
